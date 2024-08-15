@@ -1,4 +1,33 @@
-<h2>Product Details</h2> 
+<h2>Product Details</h2>
+<hr/>
+<div *ngIf="product">
+  <div>
+    <label for=""><b>Product Name: </b></label> {{product.productName}}
+  </div>
+  <div>
+    <label for=""><b>Product Price: </b></label>{{product.price}}
+  </div>
+  <div>
+    <label for=""><b>Product Description</b></label>{{product.productDesc}}
+  </div>
+</div>
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Products List</button><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h2>Product Details</h2> 
 
 <hr/>
 <div *ngIf="product">
@@ -17,7 +46,7 @@
 <br>
 <button (click)="list()" class="btn btn-primary">Back to Products List</button><br>
 
-
+ -->
 
 
 

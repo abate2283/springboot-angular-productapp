@@ -18,7 +18,7 @@ throw new Error('Method not implemented.');
 
   constructor(private productService: ProductService, private router: Router){}
 
-  ngOnInit(){
+  ngOnInit(): void{
     this.fetchProductList();
     
   }

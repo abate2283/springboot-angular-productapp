@@ -1,6 +1,4 @@
 
-
-
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -19,43 +17,47 @@ export class ReadProductComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router,
     private productService: ProductService) { }
 
-  ngOnInit() {
-    this.product = new Product();
-
-    this.id = this.route.snapshot.params['id'];
-
-    this.productService.getProduct(this.id)
-      .subscribe(data => {
-        console.log(data)
-        this.product = data;
-      }, error => console.log(error));
+    ngOnInit() {
+      this.product = new Product();
+  
+      this.id = this.route.snapshot.params['id'];
+  
+      this.productService.getProduct(this.id)
+        .subscribe(data => {
+          console.log(data)
+          this.product = data;
+        }, error => console.log(error));
+    }
+  
+    list() {
+      this.router.navigate(['products']);
+    }
   }
 
-  list() {
-    this.router.navigate(['products']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  function list() {
+    throw new Error('Function not implemented.');
   }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import { Component } from '@angular/core';
 
 // @Component({

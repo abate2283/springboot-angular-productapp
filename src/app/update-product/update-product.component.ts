@@ -36,7 +36,9 @@ export class UpdateProductComponent implements OnInit {
     this.gotoList();
   }
 
-  onSubmit() {
+  submitted = false;
+  onSubmit(): void {
+    this.submitted = true;
     this.updateProduct();    
   }
 
